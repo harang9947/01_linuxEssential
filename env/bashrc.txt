@@ -1,0 +1,29 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+#
+#Sfecific Configuration
+#
+# export PS1='[\u@\h \w]\$ '
+export PS1='\[\e[31;1m\][\u@\h\[\e[33;1m\] \w]\$ \[\e[m\]'
+
+alias lsf='ls -l |grep "^-"'
+alias lsd='ls -l |grep "^d"'
+
+alias ls='ls --color=auto -h -F'
+alias c='clear'
+
+alias pps='ps -ef | head -1 ; ps -ef | grep $1'
+alias nstate='netstat -antup | head -2 ; netstat -antup | grep $1'
+
+alias vi=' /usr/bin/vim'
